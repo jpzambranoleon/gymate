@@ -2,6 +2,7 @@ import About from "../components/About/About";
 import ChooseUs from "../components/ChooseUs";
 import Featured from "../components/Featured";
 import Hero from "../components/Hero";
+import Trainers from "../components/Trainers/Trainers";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <About />
       <Featured />
       <ChooseUs />
+      <Trainers />
     </>
   );
 }
