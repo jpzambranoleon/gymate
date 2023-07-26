@@ -649,6 +649,15 @@ body {
   border: 2px solid #FF0336;
 }
 
+/* blog section */
+.cta-section {
+  background-image: url('src/assets/images/call/background.jpg');
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* scrollbar ------------------------- */
 
 /* Firefox */

@@ -1,4 +1,5 @@
 import About from "../components/About/About";
+import Blog from "../components/Blog/Blog";
 import BmiCalc from "../components/BmiCalc";
 import ChooseUs from "../components/ChooseUs";
 import Featured from "../components/Featured";
@@ -20,6 +21,7 @@ export default function Home() {
       <Gallery />
       <BmiCalc />
       <Pricing />
+      <Blog />
     </>
   );
 }
