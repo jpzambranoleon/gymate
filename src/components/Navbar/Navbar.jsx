@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Logo from "../../assets/images/logo/logo.svg";
-import NavList from "../Navbar/NavList";
+import NavList from "./NavList";
 import { Link } from "react-router-dom";
 import LogoSide from "../../assets/images/logo/logo-footer.svg";
 import SideImg1 from "../../assets/images/sidebar/1.jpg";
@@ -13,8 +13,8 @@ import SideImg6 from "../../assets/images/sidebar/6.jpg";
 export default function Navbar() {
   const [spin, setSpin] = useState(false);
   const [sticky, setSticky] = useState(false);
-  const [sidebar, setSideBar] = useState(false);
-  const [hamburger, setHamburger] = useState(false);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [isHamburgerOpen, setHamburgerOpen] = useState(false);
 
   const joinSpin = () => {
     setSpin(true);
@@ -44,13 +44,13 @@ export default function Navbar() {
   };
 
   // sidebar
-  const sideBar = () => {
-    setSideBar(!sidebar);
+  const toggleSidebar = () => {
+    setSidebarOpen((prev) => !prev);
   };
 
   // hamburger menu
-  const hamburgerMenu = () => {
-    setHamburger(!hamburger);
+  const toggleHamburger = () => {
+    setHamburgerOpen((prev) => !prev);
   };
 
   return (
@@ -76,19 +76,20 @@ export default function Navbar() {
             {/* mobile menu -------------- */}
 
             {/* hamburger menu */}
+            {/*
             <div
               className={`flex top-0 flex-col fixed w-full left-0 h-screen bg-white z-[9999999999] py-[60px] px-[40px] ease-in-out duration-500  ${
-                hamburger ? "left-0" : "-left-[100%]"
+                isHamburgerOpen ? "left-0" : "-left-[100%]"
               }`}
             >
               <i
-                onClick={hamburgerMenu}
+                onClick={toggleHamburger}
                 className="fa-solid fa-xmark text-[#ff0336] text-[3.3rem] cursor-pointer self-end"
               ></i>
 
-              {/* links */}
+              {/* links 
               <ul className="text-center flex flex-col gap-10 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
-                <li onClick={hamburgerMenu}>
+                <li onClick={toggleHamburger}>
                   <a
                     onClick={() => window.top(0, 0)}
                     className="text-[2rem] font-medium hover:text-[#ff0336] ease-in duration-200"
@@ -97,7 +98,7 @@ export default function Navbar() {
                     Home
                   </a>
                 </li>
-                <li onClick={hamburgerMenu}>
+                <li onClick={toggleHamburger}>
                   <Link
                     onClick={() => window.top(0, 0)}
                     className="text-[2rem] font-medium hover:text-[#ff0336] ease-in duration-200"
@@ -106,7 +107,7 @@ export default function Navbar() {
                     About
                   </Link>
                 </li>
-                <li onClick={hamburgerMenu}>
+                <li onClick={toggleHamburger}>
                   <Link
                     onClick={() => window.top(0, 0)}
                     className="text-[2rem] font-medium hover:text-[#ff0336] ease-in duration-200"
@@ -115,7 +116,7 @@ export default function Navbar() {
                     Schedule
                   </Link>
                 </li>
-                <li onClick={hamburgerMenu}>
+                <li onClick={toggleHamburger}>
                   <Link
                     onClick={() => window.top(0, 0)}
                     className="text-[2rem] font-medium hover:text-[#ff0336] ease-in duration-200"
@@ -124,7 +125,7 @@ export default function Navbar() {
                     Gallery
                   </Link>
                 </li>
-                <li onClick={hamburgerMenu}>
+                <li onClick={toggleHamburger}>
                   <Link
                     onClick={() => window.top(0, 0)}
                     className="text-[2rem] font-medium hover:text-[#ff0336] ease-in duration-200"
@@ -133,7 +134,7 @@ export default function Navbar() {
                     Blog
                   </Link>
                 </li>
-                <li onClick={hamburgerMenu}>
+                <li onClick={toggleHamburger}>
                   <Link
                     onClick={() => window.top(0, 0)}
                     className="text-[2rem] font-medium hover:text-[#ff0336] ease-in duration-200"
@@ -142,7 +143,7 @@ export default function Navbar() {
                     Contact
                   </Link>
                 </li>
-                <li onClick={hamburgerMenu}>
+                <li onClick={toggleHamburger}>
                   <Link
                     onClick={() => window.top(0, 0)}
                     className="text-[2rem] font-medium hover:text-[#ff0336] ease-in duration-200"
@@ -151,7 +152,7 @@ export default function Navbar() {
                     Pricing
                   </Link>
                 </li>
-                <li onClick={hamburgerMenu}>
+                <li onClick={toggleHamburger}>
                   <Link
                     onClick={() => window.top(0, 0)}
                     className="text-[2rem] font-medium hover:text-[#ff0336] ease-in duration-200"
@@ -161,25 +162,25 @@ export default function Navbar() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             {/* sidebar */}
 
-            <div>
+            {/*<div>
               <div
                 className={`flex flex-col fixed w-[40rem] min450:w-full h-[100vh] bg-white top-0 left-0 z-[9999999999] p-[45px] gap-24 overflow-x-hidden ease-in-out duration-[0.5s] ${
-                  sidebar ? "left-0" : "-left-[100%]"
+                  isSidebarOpen ? "left-0" : "-left-[100%]"
                 }`}
               >
-                {/* logo & X */}
+                {/* logo & X 
                 <div className="flex justify-between items-center">
                   <img src={LogoSide} alt="logo_img" className="w-[13rem]" />
                   <i
-                    onClick={sideBar}
+                    onClick={toggleSidebar}
                     className="fa-solid fa-xmark text-[#ff0336] text-[3.3rem] cursor-pointer"
                   ></i>
                 </div>
-                {/* about us */}
+                {/* about us *
                 <div className="flex flex-col gap-6">
                   <h3 className="text-[2rem] font-bold">About Us</h3>
                   <p className="text-[1.6rem] font-medium text-[#000000b1]">
@@ -189,7 +190,7 @@ export default function Navbar() {
                     a welcoming and supportive environment.
                   </p>
                 </div>
-                {/* gallery */}
+                {/* gallery 
                 <div className="flex flex-col gap-6">
                   <h3 className="text-[2rem] font-bold">Gallery</h3>
                   <div className="grid grid-cols-3 grid-rows-2 gap-4">
@@ -225,7 +226,7 @@ export default function Navbar() {
                     />
                   </div>
                 </div>
-                {/* contact */}
+                {/* contact 
                 <div className="flex flex-col gap-6">
                   <h3 className="text-[2rem] font-bold">Contact Info</h3>
                   <p className="text-[1.6rem] font-medium text-[#000000b1] hover:text-[#ff0336] cursor-pointer ease-in duration-200">
@@ -241,7 +242,7 @@ export default function Navbar() {
                     &nbsp; gymate@gymail.com
                   </p>
                 </div>
-                {/* follow us */}
+                {/* follow us 
                 <div className="flex flex-col gap-6">
                   <h3 className="text-[2rem] font-bold">Follow Us</h3>
                   <div className="flex gap-5">
@@ -257,11 +258,11 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> /*}
 
             {/* hamburger */}
             <i
-              onClick={hamburgerMenu}
+              onClick={toggleHamburger}
               className="fa-bars fa-solid hidden text-white text-4xl cursor-pointer hover:text-[#FF0336] ease-in duration-200"
             ></i>
             {/* account */}
@@ -270,7 +271,7 @@ export default function Navbar() {
             </Link>
             {/* sidebar */}
             <i
-              onClick={sideBar}
+              onClick={toggleSidebar}
               className="fa-regular fa-chart-bar text-white text-4xl cursor-pointer hover:text-[#FF0336] ease-in duration-200"
             ></i>
           </div>
