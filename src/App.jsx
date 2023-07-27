@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./views/Home";
 import Footer from "./components/Footer";
@@ -21,12 +20,14 @@ import Friday from "./views/Schedule/Friday";
 import Saturday from "./views/Schedule/Saturday";
 import Sunday from "./views/Schedule/Sunday";
 import Gallery from "./views/Gallery/Gallery";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <>
       <Router>
         <AuthContextProvider>
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="contact" element={<Contact />} />
