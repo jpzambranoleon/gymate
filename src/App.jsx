@@ -9,6 +9,7 @@ import Signup from "./views/SignUp";
 import Contact from "./views/Contact";
 import Classes from "./views/Classes";
 import Blog from "./views/Blog";
+import Price from "./views/Price";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
             <Route path="classes" element={<Classes />} />
+            <Route path="pricing" element={<Price />} />
             <Route path="blog" element={<Blog />} />
             <Route path="about" element={<About />} />
           </Routes>
