@@ -4,16 +4,19 @@ import Home from "./views/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer";
 import About from "./views/About";
+import { AuthContextProvider } from "./context/AuthContext";
 
 function App() {
   return (
     <>
       <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-        </Routes>
-        <Footer />
+        <AuthContextProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="about" element={<About />} />
+          </Routes>
+          <Footer />
+        </AuthContextProvider>
       </Router>
     </>
   );
