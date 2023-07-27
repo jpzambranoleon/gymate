@@ -658,6 +658,18 @@ body {
   background-repeat: no-repeat;
 }
 
+/* cta banner */
+
+.cta-banner-btn {
+  padding: 18px 22px;
+}
+
+/* gallery */
+
+.gallery-cta {
+  display: none;
+}
+
 /* scrollbar ------------------------- */
 
 /* Firefox */

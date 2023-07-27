@@ -2,6 +2,7 @@ import About from "../components/About/About";
 import Blog from "../components/Blog/Blog";
 import BmiCalc from "../components/BmiCalc";
 import ChooseUs from "../components/ChooseUs";
+import CtaBanner from "../components/CtaBanner";
 import Featured from "../components/Featured";
 import Gallery from "../components/Gallery";
 import Hero from "../components/Hero";
@@ -22,6 +23,7 @@ export default function Home() {
       <BmiCalc />
       <Pricing />
       <Blog />
+      <CtaBanner />
     </>
   );
 }
