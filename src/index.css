@@ -217,37 +217,37 @@ body {
 }
 
 .item-0-div::before {
-  content: url('../src/images/features/gym-bike.png');
+  content: url('src/assets/images/features/gym-bike.png');
   left: -25px;
   bottom: 45%;
 }
 
 .item-1-div::before {
-  content: url('../src/images/features/karate.png');
+  content: url('src/assets/images/features/karate.png');
   left: -1px;
   bottom: 45%;
 }
 
 .item-2-div::before {
-  content: url('../src/images/features/dumbbell.png');
+  content: url('src/assets/images/features/dumbbell.png');
   left: -1px;
   bottom: 45%;
 }
 
 .item-3-div::before {
-  content: url('../src/images/features/yoga.png');
+  content: url('src/assets/images/features/yoga.png');
   left: -1px;
   bottom: 45%;
 }
 
 .item-4-div::before {
-  content: url('../src/images/features/boxer.png');
+  content: url('src/assets/images/features/boxer.png');
   left: -1px;
   bottom: 45%;
 }
 
 .item-5-div::before {
-  content: url('../src/images/features/workout.png');
+  content: url('src/assets/images/features/workout.png');
   left: -25px;
   bottom: 45%;
 }
@@ -483,7 +483,7 @@ body {
 /* trainers section */
 
 .trainers-section {
-  background-image: url('../src/images/trainers/dot-bg.png');
+  background-image: url('src/assets/images/trainers/dot-bg.png');
   object-fit: cover;
   background-size: cover;
   background-position: center center;
