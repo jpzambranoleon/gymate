@@ -7,6 +7,8 @@ import { AuthContextProvider } from "./context/AuthContext";
 import Login from "./views/Login";
 import Signup from "./views/SignUp";
 import Contact from "./views/Contact";
+import Classes from "./views/Classes";
+import Blog from "./views/Blog";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Route path="contact" element={<Contact />} />
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
+            <Route path="classes" element={<Classes />} />
+            <Route path="blog" element={<Blog />} />
             <Route path="about" element={<About />} />
           </Routes>
           <Footer />
