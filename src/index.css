@@ -682,7 +682,7 @@ body {
 }
 
 .login-banner {
-  background-image: url('src/assets/images/login/banner.jpg');
+  background-image: url('/src/assets/images/login/banner.jpg');
   object-fit: cover;
   background-size: cover;
   background-position: center;
